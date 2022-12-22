@@ -4,9 +4,10 @@ Create a serverless REST API
 
 [UML](./assets/UML.png)
 
-[GitHub PR]()
+[GitHub PR](https://github.com/cesarderio/serverless-api/pull/1)
 
-[Deployed Lambdas]()
+// currently not working when deployed
+[Deployed API](https://af3sbb07ra.execute-api.us-west-2.amazonaws.com/Production)
 
 ## Feature Tasks
 
@@ -74,8 +75,47 @@ Document the data and program flow for your API, including the mapping of Routes
 
 * What is the root URL to your API?
 
+// currently not working when deployed
+[Deployed API](https://af3sbb07ra.execute-api.us-west-2.amazonaws.com/Production)
+
 * What are the routes?
+
+  * "/"
+
+  * "/people-list"
+
+    * **GET**
+
+    * **POST** / **CREATE**
+
+  * "/people-list/id"
+
+    * **DELETE**
+
+    * **PUT** / **UPDATE**
 
 * What inputs do they require?
 
+  * POST needs a JSON object with our schema layout
+        {
+          "id": String,
+          "name": String,
+          "phone": String
+        }
+
+  * DELETE needs an {id}
+
+  * PUT needs a JSON object with information to update i.e.:
+        {
+          "phone": String
+        }
+
 * What output do they return?
+
+  * GET gets all ids in database
+
+  * POST shows the created item
+
+  * id/DELETE shows id of deleted item.
+
+  * UPDATE shows updated item
