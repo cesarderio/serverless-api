@@ -7,6 +7,7 @@ const schema = new dynamoose.Schema({
 });
 
 const peopleModel = dynamoose.model('people-demo', schema);
+
 exports.handler = async(event) => {
 
   console.log('queryStringParameters', event.queryStringParameters);
